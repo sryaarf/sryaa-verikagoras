@@ -1,30 +1,51 @@
-## Sunday Creative Place
+<h2 id="sunday-creative-place">Sunday Creative Place</h2>
+<p>selamat datang di repositori <strong>&quot;Sunday Creative Place&quot;</strong></p>
+<blockquote>
+<p>[!important]
+<strong>karya ini bukanlah karya kolaboratif aku ulangi lagi <code>BUKAN KARYA KOLABORATIF</code> karena ini karya buatanku</strong></p>
+</blockquote>
+<h2 id="kreasi-hanya-berbahasa-indonesia-">Kreasi [HANYA BERBAHASA INDONESIA]</h2>
+<p>list semua karya yang dibuat berdasarkan request </p>
+<pre><code>request <span class="hljs-keyword">bisa </span><span class="hljs-keyword">dikirim </span>melalui credits <span class="hljs-keyword">dibawah </span>kreasi
+</code></pre><hr>
 
-selamat datang di repositori **"Sunday Creative Place"**
-> [!important]
-> **karya ini bukanlah karya kolaboratif aku ulangi lagi `BUKAN KARYA KOLABORATIF` karena ini karya buatanku**
-
-## Kreasi [HANYA BERBAHASA INDONESIA]
-
-list semua karya yang dibuat berdasarkan request 
-```
-request bisa dikirim melalui credits dibawah kreasi
-```
+<blockquote>
+<p>[!CAUTION]
+karya ini tidak terjadi pada dunia nyata dan karya ini tidak bermaksud menyinggung pihak manapun baik individu hingga pemerintahan</p>
+</blockquote>
 <hr>
 
-> [!CAUTION]
-> karya ini tidak terjadi pada dunia nyata dan karya ini tidak bermaksud menyinggung pihak manapun baik individu hingga pemerintahan
-
-<hr>
-
-###### **[STAR RAIL WARS](./original/SRW-Prologue.md) WORK IN PROGRESS**
-menceritakan tentang aturan yang tidak dirapatkan bersama **Transgalactic Star Railways [TSR]**, karena pihak **Rail Defense Association [RDA]** ingin **The StoneHarts Rails** dibawah kendali penuh oleh militer bersenjata, bukan dibawah kendali penuh para insinyur dan pabrikan kereta api antar galaksi dan bintang Milik organisasi sipil
-
-> [!NOTE]
-> karya ini terinspirasi dari anime berjudul `Galaxy Railways [GR]` dan juga terdapat beberapa lore/cerita tersembunyi dari game `Honkai: Star Rail [HSR]`
-
-#### daftar isi
-| No. |      Episode\|Title      | Release date | Status |
-|:---:|:------------------------:|:------------:|:------:|
-|  1  |       00\|Prologue       |      TBA     |   WIP  |
-|  2  | 01\|The Silver Rail Myth |      TBA     |   WIP  |
+<h6 id="-star-rail-wars-original-srw-prologue-md-work-in-progress-"><strong><a href="./original/SRW-Prologue.md">STAR RAIL WARS</a> WORK IN PROGRESS</strong></h6>
+<p>menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> dibawah kendali penuh oleh militer bersenjata, bukan dibawah kendali penuh para insinyur dan pabrikan kereta api antar galaksi dan bintang Milik organisasi sipil</p>
+<blockquote>
+<p>[!NOTE]
+karya ini terinspirasi dari anime berjudul <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore/cerita tersembunyi dari game <code>Honkai: Star Rail [HSR]</code></p>
+</blockquote>
+<h4 id="daftar-isi">daftar isi</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">No.</th>
+<th style="text-align:center">Episode\</th>
+<th style="text-align:center">Title</th>
+<th style="text-align:center">Release date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">00\</td>
+<td style="text-align:center">Prologue</td>
+<td style="text-align:center">TBA</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">01\</td>
+<td style="text-align:center">The Silver Rail Myth</td>
+<td style="text-align:center">TBA</td>
+<td>WIP</td>
+</tr>
+</tbody>
+</table>
