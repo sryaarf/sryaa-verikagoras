@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidak ditemukan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(173, 216, 230, 0.5); /* Biru muda dengan opasitas */
+            padding: 20px;
+            border: 4px solid lightblue;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: #4682B4; /* Biru muda gelap */
+            border: 2px solid lightblue;
+            border-radius: 0; /* Kotak sempurna */
+        }
+        
+        
+    </style>
+    <script>
+        let images = [
+            "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/ratio.jpg",
+            "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/sunday.jpg"
+        ];
+        let index = 0;
+        function changeBackground() {
+            document.body.style.backgroundImage = `url('${images[index]}')`;
+            index = (index + 1) % images.length;
+        }
+        setInterval(changeBackground, 10000);
+        window.onload = function() {
+            changeBackground();
+            document.getElementById("displayed-image").src = "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/sunday.jpg";
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Maaf Kalian Tidak Memiliki akses untuk masuk kedalam sini</h2>
+        <h5>Silakan kembali dengan mengklik tombol dibawah ini</h5>
+        <a href="https://drathaivehzuuryaaajyaqiuuu.github.io/sryaa-verikava.github.io/" class="button">Kembali</a>
+    </div>
+</body>
+</html>
