@@ -14,9 +14,6 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      background-size: cover;
-      background-position: center;
-      transition: background-image 1s ease-in-out;
     }
 
     strong {
@@ -337,20 +334,6 @@
         }, 10);
       }
     }
-    let images = [
-            "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/ratio.jpg",
-            "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/sunday.jpg"
-        ];
-        let index = 0;
-        function changeBackground() {
-            document.body.style.backgroundImage = `url('${images[index]}')`;
-            index = (index + 1) % images.length;
-        }
-        setInterval(changeBackground, 10000);
-        window.onload = function() {
-            changeBackground();
-            document.getElementById("displayed-image").src = "https://raw.githubusercontent.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava.github.io/refs/heads/main/sunday.jpg";
-        };
   </script>
 </body>
 </html>
