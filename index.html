@@ -5,25 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srya Verikava Sites</title>
   <style>
+    /* Style untuk Body */
     body {
       background-color: #24292e;
       color: #ffffff;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       text-align: center;
-      opacity: 1;
-      transition: opacity 1.5s ease-in-out;
-    }
-
-    body.fade-in {
-      opacity: 1;
     }
 
     strong {
       font-weight: bold;
     }
 
+    /* Navigasi Bar */
+    nav {
+      background-color: #24292e;
+      padding: 5px 10px; /* Padding lebih kecil */
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style untuk tombol di bar navigasi */
+    nav a {
+      background-color: rgba(135, 206, 250, 0.1); /* Warna biru muda */
+      color: #87CEFA; /* Teks berwarna biru terang */
+      padding: 5px 12px; /* Padding lebih kecil */
+      text-decoration: none;
+      font-size: 13px; /* Ukuran font lebih kecil */
+      margin: 0 6px; /* Margin lebih kecil */
+      border: 2px solid #87CEFA; /* Border biru terang */
+      border-radius: 0;
+      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: rgba(135, 206, 250, 0.2); /* Warna biru muda saat hover */
+      transform: scale(1.05);
+    }
+
+    nav a:active {
+      background-color: rgba(135, 206, 250, 0.3); /* Warna biru muda saat aktif */
+    }
+
+    /* Animasi untuk teks yang berjalan */
     h2 {
       color: #87CEFA;
       font-weight: bold;
@@ -46,6 +77,7 @@
       }
     }
 
+    /* Blockquote style */
     blockquote {
       background: rgba(135, 206, 250, 0.2);
       padding: 8px;
@@ -54,6 +86,7 @@
       font-size: 14px;
     }
 
+    /* Table style */
     table {
       width: 80%;
       margin: 20px auto;
@@ -85,6 +118,7 @@
       text-decoration: underline;
     }
 
+    /* Button style */
     button {
       background-color: rgba(135, 206, 250, 0.1);
       color: #87CEFA;
@@ -94,7 +128,8 @@
       cursor: pointer;
       font-size: 14px;
       display: block;
-      width: 200px;
+      width: 95%; /* Menyesuaikan tombol agar hampir memenuhi lebar layar */
+      max-width: 600px; /* Maksimal lebar tombol */
       transition: all 0.3s ease;
       border-radius: 0;
     }
@@ -118,6 +153,7 @@
       margin-right: auto;
     }
 
+    /* Animasi untuk konten utama masuk dari bawah */
     .content-box {
       background: rgba(255, 255, 255, 0.1);
       padding: 15px;
@@ -128,80 +164,91 @@
       margin-right: auto;
       text-align: left;
       opacity: 0;
-      transform: translateX(-100%);
-      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+      transform: translateY(100%);
+      transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     }
 
     .content-box.show {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
 
     .content-box.hide {
       opacity: 0;
-      transform: translateX(100%);
+      transform: translateY(100%);
     }
   </style>
 </head>
 <body>
-  <strong><h2 class="moving-text">Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
-  <p>Selamat datang di Website ku <strong>"Srya VErkava"</strong></p>
-  <blockquote>
-    <p><strong>[IMPORTANT]</strong><br>
-    Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
-  </blockquote>
+  <!-- Bar Navigasi -->
+  <nav>
+    <a href="#">Halaman Utama</a>
+    <a href="#credits">Credits</a>
+    <a href="#contact">Kontak Srya Verikava</a>
+    <a href="#discord">Server Discord</a>
+    <a href="#thanks">Ucapan Terimakasih / Spesial Thanks</a>
+  </nav>
 
-  <strong><h4>Kreasi [HANYA BERBAHASA INDONESIA]</h4></strong>
-  <p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
-  <pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
-  <hr>
-
-  <blockquote>
-    <p><strong>[CAUTION]</strong><br>
-    Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
-  </blockquote>
-  <hr>
-
-  <button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
-  <div id="srwContent" class="content-box">
-    <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
-    <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
-
+  <div style="padding-top: 60px;">
+    <strong><h2 class="moving-text">Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
+    <p>Selamat datang di Website ku <strong>"Srya VErkava"</strong></p>
     <blockquote>
-      <p><strong>[NOTE]</strong><br>
-      Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
+      <p><strong>[IMPORTANT]</strong><br>
+      Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
     </blockquote>
 
-    <a href="./original/SRW-Prologue.md" target="_blank">
-      <button>Baca Sekarang</button>
-    </a>
-
+    <strong><h4>Kreasi [HANYA BERBAHASA INDONESIA]</h4></strong>
+    <p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
+    <pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
     <hr>
-    <strong><h4>Daftar Isi</h4></strong>
-    <table>
-      <thead>
-        <tr>
-          <th>No.</th>
-          <th>Episode | Title</th>
-          <th>Release Date</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_1';"><button>00|The Prologue</button></a></td>
-          <td>TBA</td>
-          <td>WIP</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_2';"><button>01|The Silver Rails Myth</button></a></td>
-          <td>TBA</td>
-          <td>WIP</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <blockquote>
+      <p><strong>[CAUTION]</strong><br>
+      Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
+    </blockquote>
+    <hr>
+
+    <button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
+    <div id="srwContent" class="content-box">
+      <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
+      <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
+
+      <blockquote>
+        <p><strong>[NOTE]</strong><br>
+        Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
+      </blockquote>
+
+      <a href="./original/SRW-Prologue.md" target="_blank">
+        <button>Baca Sekarang</button>
+      </a>
+
+      <hr>
+      <strong><h4>Daftar Isi</h4></strong>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Episode | Title</th>
+            <th>Release Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_1';"><button>00|The Prologue</button></a></td>
+            <td>TBA</td>
+            <td>WIP</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_2';"><button>01|The Silver Rails Myth</button></a></td>
+            <td>TBA</td>
+            <td>WIP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <script>
@@ -221,10 +268,14 @@
     }
 
     window.addEventListener('load', function() {
-      document.body.style.opacity = "0";
-      setTimeout(function() {
-        document.body.classList.add('fade-in');
-      }, 10);
+      // Hapus animasi fade-in halaman utama
+      // Menambahkan animasi konten dari bawah
+      var contentBoxes = document.querySelectorAll('.content-box');
+      setTimeout(() => {
+        contentBoxes.forEach(box => {
+          box.classList.add('show');
+        });
+      }, 500); // Delay untuk menampilkan konten dengan animasi
     });
   </script>
 
