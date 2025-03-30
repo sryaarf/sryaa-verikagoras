@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srya Verikava Sites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet"> <!-- Menambahkan Font Lexend Deca -->
   <style>
     /* Style untuk Body */
     body {
       background-color: #24292e;
       color: #ffffff;
-      font-family: Arial, sans-serif;
+      font-family: 'Lexend Deca', sans-serif; /* Menggunakan font Lexend Deca */
       margin: 0;
       padding: 0;
       text-align: center;
@@ -22,246 +23,231 @@
     /* Navigasi Bar */
     nav {
       background-color: #24292e;
-      padding: 5px 10px;
+      padding: 10px 0;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* Style untuk tombol di bar navigasi */
-    nav a {
+    /* Judul di Navigasi - Sisi Kiri */
+    .nav-title {
+      color: #87CEFA; /* Biru muda untuk judul */
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    /* Navigasi menu */
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 10px;
+      padding-right: 20px;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
       background-color: rgba(135, 206, 250, 0.1); /* Warna biru muda */
       color: #87CEFA; /* Teks berwarna biru terang */
-      padding: 5px 12px;
+      padding: 10px 15px;
       text-decoration: none;
-      font-size: 13px;
-      margin: 0 6px;
-      border: 2px solid #87CEFA; /* Border biru terang */
+      font-size: 16px;
+      border: 3px solid #87CEFA; /* Border biru terang dengan ketebalan 3px */
       border-radius: 0;
-      display: inline-block;
       transition: background-color 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
     }
 
-    nav a:hover {
-      background-color: rgba(135, 206, 250, 0.2); /* Warna biru muda saat hover */
+    .nav-links a:hover {
+      background-color: rgba(135, 206, 250, 0.2);
       transform: scale(1.05);
     }
 
-    nav a:active {
-      background-color: rgba(135, 206, 250, 0.3); /* Warna biru muda saat aktif */
+    .nav-links a:active {
+      background-color: rgba(135, 206, 250, 0.3);
     }
 
-    /* Menghapus efek animasi berjalan pada judul */
-    h2 {
-      color: #87CEFA;
-      font-weight: bold;
-      font-size: 18px;
-      /* Animasi dihapus */
-      white-space: nowrap;
-    }
-
-    h4 {
-      color: #87CEFA;
-      font-weight: bold;
-    }
-
-    /* Blockquote style */
-    blockquote {
-      background: rgba(135, 206, 250, 0.2);
-      padding: 8px;
-      border-left: 3px solid #87CEFA;
-      font-style: italic;
-      font-size: 14px;
-    }
-
-    /* Table style */
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: #333;
-      color: #fff;
-      font-size: 12px;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #5dade2;
-    }
-
-    td {
-      background-color: #444;
-    }
-
-    a {
-      color: #f39c12;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Button style */
-    button {
+    /* Button Style (Matches the footer and navigation buttons) */
+    button, .footer-button {
       background-color: rgba(135, 206, 250, 0.1);
       color: #87CEFA;
-      border: 2px solid #87CEFA;
+      border: 3px solid #87CEFA;
       padding: 12px 18px;
       margin: 10px auto;
       cursor: pointer;
       font-size: 14px;
       display: block;
-      width: 95%; /* Menyesuaikan tombol agar hampir memenuhi lebar layar */
+      width: 95%; /* Tombol lebih besar untuk layar kecil */
       max-width: 600px; /* Maksimal lebar tombol */
       transition: all 0.3s ease;
-      border-radius: 0;
+      border-radius: 0; /* Menghapus sudut membulat */
     }
 
-    button:hover {
+    button:hover, .footer-button:hover {
       background-color: rgba(135, 206, 250, 0.2);
       border-color: #5dade2;
       transform: translateY(-3px);
     }
 
-    button:active {
+    button:active, .footer-button:active {
       background-color: rgba(135, 206, 250, 0.3);
       transform: translateY(1px);
     }
 
-    button + hr {
-      margin-top: 5px;
-      border: 1px solid #87CEFA;
-      width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Animasi untuk konten utama masuk dari bawah */
+    /* Konten Star Rail Wars */
     .content-box {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(135, 206, 250, 0.1);
       padding: 15px;
-      border-radius: 8px;
-      margin-top: 10px;
-      max-width: 80%;
+      margin-top: 20px;
+      border: 5px solid rgba(135, 206, 250, 0.5); /* Border biru muda pudar */
+      border-radius: 0;
+      max-width: 90%;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
       opacity: 0;
-      transform: translateY(100%);
-      transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     }
 
     .content-box.show {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
 
     .content-box.hide {
       opacity: 0;
-      transform: translateY(100%);
+      transform: translateX(-100%);
     }
 
-    /* Media Queries untuk Responsivitas */
-    @media only screen and (max-width: 600px) {
-      /* Menyesuaikan untuk perangkat mobile */
-      h2 {
-        font-size: 16px;
-      }
-
-      nav a {
-        font-size: 12px;
-        padding: 5px 10px;
-      }
-
-      button {
-        font-size: 14px;
-        width: 90%; /* Tombol lebih kecil di layar kecil */
-      }
-
-      table {
-        width: 90%; /* Tabel lebih lebar di layar kecil */
-      }
+    /* Footer Style */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      margin-top: 20px;
     }
 
-    @media only screen and (max-width: 768px) {
-      /* Menyesuaikan untuk tablet dan iPad */
-      nav a {
-        font-size: 14px;
-        padding: 8px 15px;
-      }
-
-      button {
-        font-size: 16px;
-        width: 80%; /* Tombol lebih besar untuk tablet */
-      }
-
-      table {
-        width: 95%;
-      }
+    footer p {
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
-    @media only screen and (max-width: 1024px) {
-      /* Menyesuaikan untuk tablet ukuran lebih besar */
-      nav a {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-
-      button {
-        width: 70%; /* Tombol sedikit lebih besar */
-      }
+    /* Blockquote Styles */
+    blockquote {
+      padding: 20px;
+      border-radius: 0; /* Kotak sempurna */
+      margin: 20px auto; /* Margin untuk memberi jarak */
+      text-align: left;
+      max-width: 90%; /* Maksimal lebar blockquote */
+      width: auto;
+      box-sizing: border-box; /* Agar padding tidak mempengaruhi ukuran */
     }
 
-    @media only screen and (min-width: 1200px) {
-      /* Menyesuaikan untuk perangkat desktop */
-      nav a {
-        font-size: 18px;
-        padding: 12px 20px;
-      }
-
-      button {
-        width: 50%; /* Tombol lebih kecil di desktop */
-      }
+    /* IMPORTANT Blockquote */
+    blockquote.important {
+      border: 5px solid red;
+      background-color: rgba(255, 0, 0, 0.1);
     }
 
-    /* Sesuaikan untuk Smart TV atau Android TV */
-    @media only screen and (min-width: 1600px) {
-      /* Menyesuaikan agar tombol lebih besar untuk Smart TV */
-      button {
-        width: 60%; /* Lebar tombol untuk TV besar */
-        font-size: 18px;
-        padding: 16px 24px;
-      }
+    /* CAUTION Blockquote */
+    blockquote.caution {
+      border: 5px solid orange;
+      background-color: rgba(255, 165, 0, 0.1);
+    }
 
-      nav a {
-        font-size: 20px;
-        padding: 15px 25px;
-      }
+    /* NOTE Blockquote */
+    blockquote.note {
+      border: 5px solid blue;
+      background-color: rgba(0, 0, 255, 0.1);
+    }
+
+    /* Styling untuk semua judul */
+    h2, h3, h4, strong {
+      color: #87CEFA; /* Biru muda untuk semua judul */
+    }
+
+    /* Styling untuk Tabel (tanpa border) */
+    table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse; /* Menghapus border ganda */
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(135, 206, 250, 0.1); /* Warna latar belakang biru muda */
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(135, 206, 250, 0.05); /* Alternating row color */
+    }
+
+    tr:hover {
+      background-color: rgba(135, 206, 250, 0.2); /* Efek hover */
+    }
+
+    button {
+      background-color: rgba(135, 206, 250, 0.1);
+      color: #87CEFA;
+      border: 3px solid #87CEFA;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    button:hover {
+      background-color: rgba(135, 206, 250, 0.2);
+      border-color: #5dade2;
+    }
+
+    button:active {
+      background-color: rgba(135, 206, 250, 0.3);
+    }
+
+    /* Tombol di luar tabel disusun di tengah */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   </style>
 </head>
 <body>
   <!-- Bar Navigasi -->
   <nav>
-    <a href="#">Halaman Utama</a>
-    <a href="#credits">Credits</a>
-    <a href="#contact">Kontak Srya Verikava</a>
-    <a href="#discord">Server Discord</a>
-    <a href="#thanks">Ucapan Terimakasih / Spesial Thanks</a>
+    <span class="nav-title">drathaivehzuuryaaajyaqiuuu</span>
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#credits">Credit</a></li>
+      <li><a href="#discord">Server Discord</a></li>
+    </ul>
   </nav>
 
   <div style="padding-top: 60px;">
     <strong><h2>Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
     <p>Selamat datang di Website ku <strong>"Srya VErkava"</strong></p>
-    <blockquote>
+    <blockquote class="important">
       <p><strong>[IMPORTANT]</strong><br>
       Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
     </blockquote>
@@ -271,18 +257,23 @@
     <pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
     <hr>
 
-    <blockquote>
+    <blockquote class="caution">
       <p><strong>[CAUTION]</strong><br>
       Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
     </blockquote>
     <hr>
 
-    <button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
+    <!-- Button untuk menampilkan konten Star Rail Wars -->
+    <div class="button-container">
+      <button onclick="toggleSRW()">Star Rail Wars</button>
+    </div>
+
+    <!-- Konten yang dapat disembunyikan dan ditampilkan -->
     <div id="srwContent" class="content-box">
       <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
       <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
 
-      <blockquote>
+      <blockquote class="note">
         <p><strong>[NOTE]</strong><br>
         Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
       </blockquote>
@@ -320,6 +311,14 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT, dan website ini ditopang oleh GitHub.</p>
+    <a href="https://github.com/join" target="_blank">
+      <button class="footer-button">Bergabung ke GitHub dan Upload Kode Menarikmu Secara Gratis!!</button>
+    </a>
+  </footer>
+
   <script>
     function toggleSRW() {
       var content = document.getElementById("srwContent");
@@ -335,19 +334,6 @@
         }, 10);
       }
     }
-
-    window.addEventListener('load', function() {
-      // Menambahkan animasi konten dari bawah
-      var contentBoxes = document.querySelectorAll('.content-box');
-      setTimeout(() => {
-        contentBoxes.forEach(box => {
-          box.classList.add('show');
-        });
-      }, 500); // Delay untuk menampilkan konten dengan animasi
-    });
   </script>
-
 </body>
 </html>
-
-/* Dibuat oleh saya dan dibantu oleh chat gpt, website ini di hosting oleh github.io :) */
