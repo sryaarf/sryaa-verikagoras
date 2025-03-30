@@ -54,27 +54,18 @@
       background-color: rgba(135, 206, 250, 0.3); /* Warna biru muda saat aktif */
     }
 
-    /* Animasi untuk teks yang berjalan */
+    /* Menghapus efek animasi berjalan pada judul */
     h2 {
       color: #87CEFA;
       font-weight: bold;
       font-size: 18px;
-      animation: scrollingText 5s linear infinite;
+      /* Animasi dihapus */
       white-space: nowrap;
     }
 
     h4 {
       color: #87CEFA;
       font-weight: bold;
-    }
-
-    @keyframes scrollingText {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
     }
 
     /* Blockquote style */
@@ -268,7 +259,7 @@
   </nav>
 
   <div style="padding-top: 60px;">
-    <strong><h2 class="moving-text">Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
+    <strong><h2>Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
     <p>Selamat datang di Website ku <strong>"Srya VErkava"</strong></p>
     <blockquote>
       <p><strong>[IMPORTANT]</strong><br>
@@ -346,7 +337,6 @@
     }
 
     window.addEventListener('load', function() {
-      // Hapus animasi fade-in halaman utama
       // Menambahkan animasi konten dari bawah
       var contentBoxes = document.querySelectorAll('.content-box');
       setTimeout(() => {
@@ -359,3 +349,5 @@
 
 </body>
 </html>
+
+/* Dibuat oleh saya dan dibantu oleh chat gpt, website ini di hosting oleh github.io :) */
