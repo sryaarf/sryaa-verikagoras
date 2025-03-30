@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id"> 
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,71 +12,112 @@
       margin: 0;
       padding: 20px;
       text-align: center;
+      opacity: 1;
+      transition: opacity 1.5s ease-in-out;
     }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
     strong {
       font-weight: bold;
     }
-    h2, h4 {
-      color: #87CEFA; /* Biru muda */
+
+    h2 {
+      color: #87CEFA;
       font-weight: bold;
       font-size: 18px;
+      animation: scrollingText 5s linear infinite;
+      white-space: nowrap;
     }
+
+    h4 {
+      color: #87CEFA;
+      font-weight: bold;
+    }
+
+    @keyframes scrollingText {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
     blockquote {
-      background: rgba(135, 206, 250, 0.2); /* Biru muda */
+      background: rgba(135, 206, 250, 0.2);
       padding: 8px;
       border-left: 3px solid #87CEFA;
       font-style: italic;
       font-size: 14px;
     }
+
     table {
       width: 80%;
       margin: 20px auto;
       border-collapse: collapse;
-      background: #333; /* Dark background for the table */
+      background: #333;
       color: #fff;
-      font-size: 14px;
-      border-radius: 8px; /* Rounded corners */
-      overflow: hidden; /* Ensure content doesn't spill out */
+      font-size: 12px;
     }
+
     th, td {
       padding: 10px;
       text-align: center;
-      border: 1px solid #444; /* Slightly darker border for contrast */
     }
+
     th {
-      background-color: #87CEFA; /* Light blue header */
-      color: #24292e; /* Dark text for headers */
+      background-color: #5dade2;
     }
-    tr:nth-child(even) {
-      background-color: #444; /* Darker rows */
+
+    td {
+      background-color: #444;
     }
-    tr:nth-child(odd) {
-      background-color: #555; /* Lighter rows */
-    }
-    tr:hover {
-      background-color: #666; /* Hover effect for rows */
-    }
+
     a {
       color: #f39c12;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     button {
-      background-color: #87CEFA;
-      color: #24292e;
-      border: none;
-      padding: 8px 12px;
+      background-color: rgba(135, 206, 250, 0.1);
+      color: #87CEFA;
+      border: 2px solid #87CEFA;
+      padding: 12px 18px;
       margin: 10px auto;
       cursor: pointer;
       font-size: 14px;
       display: block;
-      transition: background-color 0.3s ease;
+      width: 200px;
+      transition: all 0.3s ease;
+      border-radius: 0;
     }
+
     button:hover {
-      background-color: #5dade2;
+      background-color: rgba(135, 206, 250, 0.2);
+      border-color: #5dade2;
+      transform: translateY(-3px);
     }
+
+    button:active {
+      background-color: rgba(135, 206, 250, 0.3);
+      transform: translateY(1px);
+    }
+
+    button + hr {
+      margin-top: 5px;
+      border: 1px solid #87CEFA;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .content-box {
       background: rgba(255, 255, 255, 0.1);
       padding: 15px;
@@ -86,41 +127,20 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
-      transform: translateX(-100%); /* Mulai dari luar kiri */
       opacity: 0;
+      transform: translateX(-100%);
       transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-      display: none; /* Initial state is hidden */
     }
+
     .content-box.show {
       opacity: 1;
-      transform: translateX(0); /* Bergeser ke kanan */
-      display: block;
+      transform: translateX(0);
     }
+
     .content-box.hide {
       opacity: 0;
-      transform: translateX(100%); /* Bergeser ke kanan ketika ditutup */
-      display: none;
+      transform: translateX(100%);
     }
-
-    /* Animasi untuk teks judul bergerak */
-    @keyframes moveText {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-    .moving-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: #87CEFA;
-      white-space: nowrap;
-      display: inline-block;
-      animation: moveText 10s linear infinite;
-    }
-
   </style>
 </head>
 <body>
@@ -152,11 +172,11 @@
       Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
     </blockquote>
 
-    <!-- Baca Sekarang Button below sinopsis -->
     <a href="./original/SRW-Prologue.md" target="_blank">
       <button>Baca Sekarang</button>
     </a>
 
+    <hr>
     <strong><h4>Daftar Isi</h4></strong>
     <table>
       <thead>
@@ -170,13 +190,13 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td>00 | Prologue</td>
+          <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_1';"><button>00|The Prologue</button></a></td>
           <td>TBA</td>
           <td>WIP</td>
         </tr>
         <tr>
           <td>2</td>
-          <td>01 | The Silver Rail Myth</td>
+          <td><a href="javascript:void(0);" onclick="window.location.href = './ganti_link_2';"><button>01|The Silver Rails Myth</button></a></td>
           <td>TBA</td>
           <td>WIP</td>
         </tr>
@@ -185,7 +205,6 @@
   </div>
 
   <script>
-    // Define the function to toggle the STAR RAIL WARS content visibility
     function toggleSRW() {
       var content = document.getElementById("srwContent");
       if (content.classList.contains("show")) {
@@ -200,6 +219,13 @@
         }, 10);
       }
     }
+
+    window.addEventListener('load', function() {
+      document.body.style.opacity = "0";
+      setTimeout(function() {
+        document.body.classList.add('fade-in');
+      }, 10);
+    });
   </script>
 
 </body>
