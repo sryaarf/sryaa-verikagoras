@@ -1,66 +1,177 @@
-<html> 
+<!DOCTYPE html>
+<html lang="id"> 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HALAMAN UTAMA</title>
   <style>
     body {
       background-color: #24292e;
       color: #ffffff;
-      font-family: "Lexend Deca", sans-serif, reguler;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    strong {
+      font-weight: bold;
+    }
+    h2, h4 {
+      color: #87CEFA; /* Biru muda */
+      font-weight: bold;
+      font-size: 18px;
+    }
+    blockquote {
+      background: rgba(135, 206, 250, 0.2); /* Biru muda */
+      padding: 8px;
+      border-left: 3px solid #87CEFA;
+      font-style: italic;
+      font-size: 14px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #333;
+      color: #fff;
+      font-size: 12px;
+    }
+    th, td {
+      padding: 6px;
+      border: 1px solid #fff;
+      text-align: center;
+    }
+    a {
+      color: #f39c12;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+        background-color: #87CEFA;
+        color: #24292e;
+        border: 2px solid #5dade2;
+        border-radius: 5px;
+        padding: 12px 20px;
+        margin: 10px auto;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        width: auto;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    button:hover {
+        background-color: #5dade2;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+        background-color: #1f78d1;
+        transform: translateY(2px);
+        box-shadow: none;
+    }
+    }
+    .content-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    .content-box.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .content-box.hide {
+      opacity: 0;
+      transform: translateX(-100%);
     }
   </style>
 </head>
 <body>
-<h2>Sunday Creative Place</h2>
-<p>Selamat datang di repositori <strong>&quot;Sunday Creative Place&quot;</strong></p>
+<strong><h2>Sunday Creative Place</h2></strong>
+<p>Selamat datang di repositori <strong>"Sunday Creative Place"</strong></p>
 <blockquote>
-<p><strong>[!important]</strong><br>
-Karya ini bukanlah karya kolaboratif, aku ulangi lagi <code>BUKAN KARYA KOLABORATIF</code> karena ini karya buatanku.</p>
+<p><strong>[!IMPORTANT]</strong><br>
+Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
 </blockquote>
 
-<h2 id="kreasi-hanya-berbahasa-indonesia-">Kreasi [HANYA BERBAHASA INDONESIA]</h2>
-<p>List semua karya yang dibuat berdasarkan request:</p>
-<pre><code>Request bisa dikirim melalui credits di bawah kreasi.
-</code></pre>
+<strong><h4>Kreasi [HANYA BERBAHASA INDONESIA]</h4></strong>
+<p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
+<pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
 <hr>
 
 <blockquote>
 <p><strong>[!CAUTION]</strong><br>
-Karya ini tidak terjadi pada dunia nyata dan tidak bermaksud menyinggung pihak manapun, baik individu hingga pemerintahan.</p>
+Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
 </blockquote>
 <hr>
 
-<h6><strong><a href="./original/SRW-Prologue.md">STAR RAIL WARS</a> WORK IN PROGRESS</strong></h6>
-<p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh oleh militer bersenjata, bukan di bawah kendali penuh para insinyur dan pabrikan kereta api antar galaksi dan bintang milik organisasi sipil.</p>
+<button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
+<div id="srwContent" class="content-box">
+  <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
+  <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
 
-<blockquote>
-<p><strong>[!NOTE]</strong><br>
-Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore/cerita tersembunyi dari game <code>Honkai: Star Rail [HSR]</code>.</p>
-</blockquote>
+  <blockquote>
+    <p><strong>[!NOTE]</strong><br>
+    Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
+  </blockquote>
+  
+  <strong><h4>Daftar Isi</h4></strong>
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Episode | Title</th>
+        <th>Release Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>00 | Prologue</td>
+        <td>TBA</td>
+        <td>WIP</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>01 | The Silver Rail Myth</td>
+        <td>TBA</td>
+        <td>WIP</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<h4>Daftar Isi</h4>
-<table border="2">
-<thead>
-<tr>
-<th style="text-align:center">No.</th>
-<th style="text-align:center">Episode | Title</th>
-<th style="text-align:center">Release Date</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">00 | Prologue</td>
-<td style="text-align:center">TBA</td>
-<td>WIP</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">01 | The Silver Rail Myth</td>
-<td style="text-align:center">TBA</td>
-<td>WIP</td>
-</tr>
-</tbody>
-</table>
+<script>
+  function toggleSRW() {
+    var content = document.getElementById("srwContent");
+    if (content.classList.contains("show")) {
+      content.classList.remove("show");
+      content.classList.add("hide");
+      setTimeout(() => content.style.display = "none", 500);
+    } else {
+      content.style.display = "block";
+      setTimeout(() => {
+        content.classList.remove("hide");
+        content.classList.add("show");
+      }, 10);
+    }
+  }
+</script>
+
 </body>
 </html>
