@@ -314,7 +314,7 @@
       <button onclick="toggleSRW()">THE HEALER OF JIAOQIU</button>
     </div>
     
-  <div id="srwContent" class="content-box">
+  <div id="thjContent" class="content-box">
       <strong><h4>THE HEALER OF JIAOQIU - WORK IN PROGRESS</h4></strong>
       <p>Menceritakan seseorang bernama <strong>Jiaoqiu</strong> ia adalah salah satu anggota <code>yaoqing military</code> sebagai seorang dokter atau healer.</p>
 
@@ -359,7 +359,7 @@
       <button onclick="toggleSRW()">SUNDAY IS THE BEST DAY</button>
     </div>
     
-  <div id="srwContent" class="content-box">
+  <div id="stbdContent" class="content-box">
       <strong><h4>SUNDAY IS THE BEST DAY - WORK IN PROGRESS</h4></strong>
       <p>Menceritakan seseorang bernama <strong>Sunday</strong> ia adalah salah satu anggota <code>The Order</code>.</p>
 
@@ -412,6 +412,30 @@
   <script>
     function toggleSRW() {
       var content = document.getElementById("srwContent");
+      if (content.classList.contains("show")) {
+        content.classList.remove("show");
+        content.classList.add("hide");
+        setTimeout(() => content.style.display = "none", 500);
+      } else {
+        content.style.display = "block";
+        setTimeout(() => {
+          content.classList.remove("hide");
+          content.classList.add("show");
+        }, 10);
+      }
+      var content = document.getElementById("thjContent");
+      if (content.classList.contains("show")) {
+        content.classList.remove("show");
+        content.classList.add("hide");
+        setTimeout(() => content.style.display = "none", 500);
+      } else {
+        content.style.display = "block";
+        setTimeout(() => {
+          content.classList.remove("hide");
+          content.classList.add("show");
+        }, 10);
+      }
+      var content = document.getElementById("stbdContent");
       if (content.classList.contains("show")) {
         content.classList.remove("show");
         content.classList.add("hide");
