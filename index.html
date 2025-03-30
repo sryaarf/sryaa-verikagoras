@@ -32,14 +32,29 @@
       width: 80%;
       margin: 20px auto;
       border-collapse: collapse;
-      background: #333;
+      background: #333; /* Dark background for the table */
       color: #fff;
-      font-size: 12px;
+      font-size: 14px;
+      border-radius: 8px; /* Rounded corners */
+      overflow: hidden; /* Ensure content doesn't spill out */
     }
     th, td {
-      padding: 6px;
-      border: 1px solid #fff;
+      padding: 10px;
       text-align: center;
+      border: 1px solid #444; /* Slightly darker border for contrast */
+    }
+    th {
+      background-color: #87CEFA; /* Light blue header */
+      color: #24292e; /* Dark text for headers */
+    }
+    tr:nth-child(even) {
+      background-color: #444; /* Darker rows */
+    }
+    tr:nth-child(odd) {
+      background-color: #555; /* Lighter rows */
+    }
+    tr:hover {
+      background-color: #666; /* Hover effect for rows */
     }
     a {
       color: #f39c12;
@@ -49,33 +64,18 @@
       text-decoration: underline;
     }
     button {
-        background-color: #87CEFA;
-        color: #24292e;
-        border: 2px solid #5dade2;
-        border-radius: 5px;
-        padding: 12px 20px;
-        margin: 10px auto;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-        width: auto;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        display: block;
+      background-color: #87CEFA;
+      color: #24292e;
+      border: none;
+      padding: 8px 12px;
+      margin: 10px auto;
+      cursor: pointer;
+      font-size: 14px;
+      display: block;
+      transition: background-color 0.3s ease;
     }
-
     button:hover {
-        background-color: #5dade2;
-        color: #fff;
-        transform: translateY(-3px);
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    button:active {
-        background-color: #1f78d1;
-        transform: translateY(2px);
-        box-shadow: none;
-    }
+      background-color: #5dade2;
     }
     .content-box {
       background: rgba(255, 255, 255, 0.1);
@@ -86,92 +86,121 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
+      transform: translateX(-100%); /* Mulai dari luar kiri */
       opacity: 0;
-      transform: translateX(-100%);
       transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+      display: none; /* Initial state is hidden */
     }
     .content-box.show {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateX(0); /* Bergeser ke kanan */
+      display: block;
     }
     .content-box.hide {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateX(100%); /* Bergeser ke kanan ketika ditutup */
+      display: none;
     }
+
+    /* Animasi untuk teks judul bergerak */
+    @keyframes moveText {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .moving-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #87CEFA;
+      white-space: nowrap;
+      display: inline-block;
+      animation: moveText 10s linear infinite;
+    }
+
   </style>
 </head>
 <body>
-<strong><h2>Sunday Creative Place</h2></strong>
-<p>Selamat datang di repositori <strong>"Sunday Creative Place"</strong></p>
-<blockquote>
-<p><strong>[!IMPORTANT]</strong><br>
-Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
-</blockquote>
+  <strong><h2 class="moving-text">Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
+  <p>Selamat datang di repositori <strong>"Sunday Creative Place"</strong></p>
+  <blockquote>
+    <p><strong>[!IMPORTANT]</strong><br>
+    Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
+  </blockquote>
 
-<strong><h4>Kreasi [HANYA BERBAHASA INDONESIA]</h4></strong>
-<p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
-<pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
-<hr>
-
-<blockquote>
-<p><strong>[!CAUTION]</strong><br>
-Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
-</blockquote>
-<hr>
-
-<button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
-<div id="srwContent" class="content-box">
-  <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
-  <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
+  <strong><h4>Kreasi [HANYA BERBAHASA INDONESIA]</h4></strong>
+  <p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
+  <pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
+  <hr>
 
   <blockquote>
-    <p><strong>[!NOTE]</strong><br>
-    Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
+    <p><strong>[!CAUTION]</strong><br>
+    Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
   </blockquote>
-  
-  <strong><h4>Daftar Isi</h4></strong>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Episode | Title</th>
-        <th>Release Date</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>00 | Prologue</td>
-        <td>TBA</td>
-        <td>WIP</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>01 | The Silver Rail Myth</td>
-        <td>TBA</td>
-        <td>WIP</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <hr>
 
-<script>
-  function toggleSRW() {
-    var content = document.getElementById("srwContent");
-    if (content.classList.contains("show")) {
-      content.classList.remove("show");
-      content.classList.add("hide");
-      setTimeout(() => content.style.display = "none", 500);
-    } else {
-      content.style.display = "block";
-      setTimeout(() => {
-        content.classList.remove("hide");
-        content.classList.add("show");
-      }, 10);
+  <button onclick="toggleSRW()">Tampilkan/Sembunyikan STAR RAIL WARS</button>
+  <div id="srwContent" class="content-box">
+    <strong><h4>STAR RAIL WARS - WORK IN PROGRESS</h4></strong>
+    <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
+
+    <blockquote>
+      <p><strong>[!NOTE]</strong><br>
+      Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
+    </blockquote>
+
+    <!-- Baca Sekarang Button below sinopsis -->
+    <a href="./original/SRW-Prologue.md" target="_blank">
+      <button>Baca Sekarang</button>
+    </a>
+
+    <strong><h4>Daftar Isi</h4></strong>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Episode | Title</th>
+          <th>Release Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>00 | Prologue</td>
+          <td>TBA</td>
+          <td>WIP</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>01 | The Silver Rail Myth</td>
+          <td>TBA</td>
+          <td>WIP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Define the function to toggle the STAR RAIL WARS content visibility
+    function toggleSRW() {
+      var content = document.getElementById("srwContent");
+      if (content.classList.contains("show")) {
+        content.classList.remove("show");
+        content.classList.add("hide");
+        setTimeout(() => content.style.display = "none", 500);
+      } else {
+        content.style.display = "block";
+        setTimeout(() => {
+          content.classList.remove("hide");
+          content.classList.add("show");
+        }, 10);
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>
