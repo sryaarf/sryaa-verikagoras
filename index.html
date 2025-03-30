@@ -22,7 +22,7 @@
     /* Navigasi Bar */
     nav {
       background-color: #24292e;
-      padding: 5px 10px; /* Padding lebih kecil */
+      padding: 5px 10px;
       position: fixed;
       top: 0;
       width: 100%;
@@ -34,10 +34,10 @@
     nav a {
       background-color: rgba(135, 206, 250, 0.1); /* Warna biru muda */
       color: #87CEFA; /* Teks berwarna biru terang */
-      padding: 5px 12px; /* Padding lebih kecil */
+      padding: 5px 12px;
       text-decoration: none;
-      font-size: 13px; /* Ukuran font lebih kecil */
-      margin: 0 6px; /* Margin lebih kecil */
+      font-size: 13px;
+      margin: 0 6px;
       border: 2px solid #87CEFA; /* Border biru terang */
       border-radius: 0;
       display: inline-block;
@@ -176,6 +176,84 @@
     .content-box.hide {
       opacity: 0;
       transform: translateY(100%);
+    }
+
+    /* Media Queries untuk Responsivitas */
+    @media only screen and (max-width: 600px) {
+      /* Menyesuaikan untuk perangkat mobile */
+      h2 {
+        font-size: 16px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+
+      button {
+        font-size: 14px;
+        width: 90%; /* Tombol lebih kecil di layar kecil */
+      }
+
+      table {
+        width: 90%; /* Tabel lebih lebar di layar kecil */
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Menyesuaikan untuk tablet dan iPad */
+      nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+
+      button {
+        font-size: 16px;
+        width: 80%; /* Tombol lebih besar untuk tablet */
+      }
+
+      table {
+        width: 95%;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      /* Menyesuaikan untuk tablet ukuran lebih besar */
+      nav a {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      button {
+        width: 70%; /* Tombol sedikit lebih besar */
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      /* Menyesuaikan untuk perangkat desktop */
+      nav a {
+        font-size: 18px;
+        padding: 12px 20px;
+      }
+
+      button {
+        width: 50%; /* Tombol lebih kecil di desktop */
+      }
+    }
+
+    /* Sesuaikan untuk Smart TV atau Android TV */
+    @media only screen and (min-width: 1600px) {
+      /* Menyesuaikan agar tombol lebih besar untuk Smart TV */
+      button {
+        width: 60%; /* Lebar tombol untuk TV besar */
+        font-size: 18px;
+        padding: 16px 24px;
+      }
+
+      nav a {
+        font-size: 20px;
+        padding: 15px 25px;
+      }
     }
   </style>
 </head>
