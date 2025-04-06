@@ -4,25 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srya Verikava Sites</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet"> <!-- Menambahkan Font Lexend Deca -->
   <style>
     /* Style untuk Body */
     body {
-      background-color: #24292e;
-      color: #ffffff;
-      font-family: 'Lexend Deca', sans-serif; /* Menggunakan font Lexend Deca */
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
       margin: 0;
       padding: 0;
       text-align: center;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(30, 30, 30, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(40, 40, 40, 0.6) 0%, transparent 50%);
     }
 
-    strong {
-      font-weight: bold;
-    }
-
-    /* Navigasi Bar */
     nav {
-      background-color: #24292e;
+      background-color: rgba(15, 15, 15, 0.9);
       padding: 10px 0;
       position: fixed;
       top: 0;
@@ -32,19 +29,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #333;
     }
 
-    /* Judul di Navigasi - Sisi Kiri */
     .nav-title {
-      color: #87CEFA; /* Biru muda untuk judul */
+      color: #a0a0ff;
       font-size: 24px;
       font-weight: bold;
-      margin: 0;
       padding-left: 20px;
-      text-align: left;
+      text-shadow: 0 0 10px rgba(160, 160, 255, 0.3);
     }
 
-    /* Navigasi menu */
     .nav-links {
       display: flex;
       list-style-type: none;
@@ -54,203 +49,142 @@
       padding-right: 20px;
     }
 
-    .nav-links li {
-      margin: 0;
-    }
-
     .nav-links a {
-      background-color: rgba(135, 206, 250, 0.1); /* Warna biru muda */
-      color: #87CEFA; /* Teks berwarna biru terang */
-      padding: 10px 15px;
+      color: #a0a0ff;
       text-decoration: none;
-      font-size: 16px;
-      border: 3px solid #87CEFA; /* Border biru terang dengan ketebalan 3px */
-      border-radius: 0;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      padding: 8px 12px;
     }
 
-    .nav-links a:hover {
-      background-color: rgba(135, 206, 250, 0.2);
-      transform: scale(1.05);
+    .hamburger {
+      display: none;
     }
 
-    .nav-links a:active {
-      background-color: rgba(135, 206, 250, 0.3);
+    h2, h4 {
+      margin: 0.5em 0;
     }
 
-    /* Button Style (Matches the footer and navigation buttons) */
-    button, .footer-button {
-      background-color: rgba(135, 206, 250, 0.1);
-      color: #87CEFA;
-      border: 3px solid #87CEFA;
-      padding: 12px 18px;
-      margin: 10px auto;
-      cursor: pointer;
-      font-size: 14px;
-      display: block;
-      width: 95%; /* Tombol lebih besar untuk layar kecil */
-      max-width: 600px; /* Maksimal lebar tombol */
-      transition: all 0.3s ease;
-      border-radius: 0; /* Menghapus sudut membulat */
-    }
-
-    button:hover, .footer-button:hover {
-      background-color: rgba(135, 206, 250, 0.2);
-      border-color: #5dade2;
-      transform: translateY(-3px);
-    }
-
-    button:active, .footer-button:active {
-      background-color: rgba(135, 206, 250, 0.3);
-      transform: translateY(1px);
-    }
-
-    /* Konten Star Rail Wars */
-    .content-box {
-      background: rgba(135, 206, 250, 0.1);
-      padding: 15px;
-      margin-top: 20px;
-      border: 5px solid rgba(135, 206, 250, 0.5); /* Border biru muda pudar */
-      border-radius: 0;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      opacity: 0;
-      transform: translateX(-100%);
-      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-    }
-
-    .content-box.show {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .content-box.hide {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-
-    /* Footer Style */
-    footer {
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    footer p {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    /* Blockquote Styles */
-    blockquote {
-      padding: 20px;
-      border-radius: 0; /* Kotak sempurna */
-      margin: 20px auto; /* Margin untuk memberi jarak */
-      text-align: left;
-      max-width: 90%; /* Maksimal lebar blockquote */
-      width: auto;
-      box-sizing: border-box; /* Agar padding tidak mempengaruhi ukuran */
-    }
-
-    /* IMPORTANT Blockquote */
-    blockquote.important {
-      border: 5px solid red;
-      background-color: rgba(255, 0, 0, 0.1);
-    }
-
-    /* CAUTION Blockquote */
-    blockquote.caution {
-      border: 5px solid orange;
-      background-color: rgba(255, 165, 0, 0.1);
-    }
-
-    /* NOTE Blockquote */
-    blockquote.note {
-      border: 5px solid blue;
-      background-color: rgba(0, 0, 255, 0.1);
-    }
-
-    /* Styling untuk semua judul */
-    h2, h3, h4, strong {
-      color: #87CEFA; /* Biru muda untuk semua judul */
-    }
-
-    /* Styling untuk Tabel (tanpa border) */
-    table {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      border-collapse: collapse; /* Menghapus border ganda */
-      margin-top: 20px;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      background-color: rgba(135, 206, 250, 0.1); /* Warna latar belakang biru muda */
-    }
-
-    tr:nth-child(even) {
-      background-color: rgba(135, 206, 250, 0.05); /* Alternating row color */
-    }
-
-    tr:hover {
-      background-color: rgba(135, 206, 250, 0.2); /* Efek hover */
+    .button-container {
+      margin: 20px 0;
     }
 
     button {
-      background-color: rgba(135, 206, 250, 0.1);
-      color: #87CEFA;
-      border: 3px solid #87CEFA;
+      background-color: #1f1f1f;
+      color: #a0a0ff;
+      border: 1px solid #555;
+      width: 90%;
+      height: 50px;
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    .content-box {
+      display: none;
+      padding: 15px;
+      margin: 10px auto;
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+
+    .content-box.show {
+      display: block;
+    }
+
+    blockquote {
+      background: #222;
+      border-left: 4px solid #a0a0ff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      max-width: 700px;
+    }
+
+    pre, code {
+      background-color: #111;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    table {
+      margin: 10px auto;
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    th, td {
+      border: 1px solid #333;
       padding: 10px;
       text-align: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
       font-size: 14px;
+      background-color: rgba(10, 10, 10, 0.8);
+    }
+
+    .footer-button {
+      background-color: #333;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      margin: 0;
+      margin-top: 10px;
     }
 
-    button:hover {
-      background-color: rgba(135, 206, 250, 0.2);
-      border-color: #5dade2;
-    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
 
-    button:active {
-      background-color: rgba(135, 206, 250, 0.3);
-    }
+      .hamburger {
+        display: block;
+        font-size: 24px;
+        color: #a0a0ff;
+        padding-right: 20px;
+        cursor: pointer;
+      }
 
-    /* Tombol di luar tabel disusun di tengah */
-    .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(15, 15, 15, 0.95);
+      }
+
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- Bar Navigasi -->
   <nav>
     <span class="nav-title">SRYAA</span>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="nav-links">
       <li><a href="#">Beranda</a></li>
-      <li><a href="./navibar/credits.html">Credit</a></li>
-      <li><a href="./navibar/supporter.html">Supporter</a></li>
+      <li><a href="/navibar/credits.html">Credit</a></li>
+      <li><a href="/navibar/supporter.html">Supporter</a></li>
     </ul>
   </nav>
 
   <div style="padding-top: 60px;">
     <strong><h2>Selamat datang di website resmi Sryaa-VeriKava</h2></strong>
-    <p>Selamat datang di Website ku <strong>"Srya Verikava"</strong></p> <br>
-    <br>
+    <p>Selamat datang di Website ku <strong>"Srya Verikava"</strong></p> <br><br>
     <p>Website ini dibuat dibawah kendali Sunday Creative Place, dan akan mempublikasikan karya karya dari SRY-ILLA II & SryA Verikava<br>
     Website ini juga adalah website kembangan satu orang yaitu Dikembangkan Oleh "SryA Verikava" Kalian Bisa mengunjungi Repositori nya melalui link <a href="https://github.com/drathaivehzuuryaaajyaqiuuu/sryaa-verikava">Repositori Github</a></p>
-    <blockquote class="important">
+
+    <blockquote>
       <p><strong>[IMPORTANT]</strong><br>
       Karya ini bukanlah karya kolaboratif. <code>BUKAN KARYA KOLABORATIF</code>, karena ini adalah karya buatanku.</p>
     </blockquote>
@@ -259,210 +193,89 @@
     <p>Daftar semua karya yang dibuat berdasarkan permintaan:</p>
     <p>Selain Itu kalian bisa melakukan request tentang sesuatu (untuk Hal yang berbau Yaoi/yuri akan aku pisah dalam navigasi terpisah) dan usahakan sertakan karakter yang terlibat</p>
     <pre><code>Request bisa dikirim melalui credits di bawah kreasi.</code></pre>
-    <hr>
 
-    <blockquote class="caution">
+    <blockquote>
       <p><strong>[CAUTION]</strong><br>
       Karya ini tidak terjadi di dunia nyata dan tidak bermaksud menyinggung pihak mana pun.</p>
     </blockquote>
-    <hr>
-    
-    
-    <!-- Button untuk menampilkan konten Star Rail Wars -->
-    <div class="button-container">
-      <button onclick="toggleSRW()">STAR RAIL WARS</button>
-    </div>
 
-    <!-- Konten yang dapat disembunyikan dan ditampilkan -->
+    <!-- Konten-konten dengan tombol -->
+    <div class="button-container"><button onclick="toggleSRW()">STAR RAIL WARS</button></div>
     <div id="srwContent" class="content-box">
-      <strong><h4>STAR RAIL WARS - !!ONGOING!!</h4></strong>
-      <p>Menceritakan tentang aturan yang tidak dirapatkan bersama <strong>Transgalactic Star Railways [TSR]</strong>, karena pihak <strong>Rail Defense Association [RDA]</strong> ingin <strong>The StoneHarts Rails</strong> berada di bawah kendali penuh militer bersenjata.</p>
-
-      <blockquote class="note">
-        <p><strong>[NOTE]</strong><br>
-        Karya ini terinspirasi dari anime <code>Galaxy Railways [GR]</code> dan juga terdapat beberapa lore dari game <code>Honkai: Star Rail [HSR]</code>.</p>
-      </blockquote>
-
-      <a href="./original/SRW_Prologue.html" target="_blank">
-        <button>Baca Sekarang (!!PREMIERE!!)</button>
-      </a>
-
+      <h4>STAR RAIL WARS - !!ONGOING!!</h4>
+      <p>Menceritakan tentang konflik antara <strong>TSR</strong> dan <strong>RDA</strong> dalam pengelolaan The StoneHarts Rails.</p>
+      <blockquote><p><strong>[NOTE]</strong><br>Karya ini terinspirasi dari <code>Galaxy Railways</code> dan <code>Honkai: Star Rail</code>.</p></blockquote>
+      <a href="./original/SRW_Prologue.html" target="_blank"><button>Baca Sekarang (!!PREMIERE!!)</button></a>
       <hr>
-      <strong><h4>Daftar Isi</h4></strong>
+      <h4>Daftar Isi</h4>
       <table>
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Episode | Title</th>
-            <th>Release Date</th>
-            <th>Status</th>
-          </tr>
-        </thead>
+        <thead><tr><th>No.</th><th>Episode | Title</th><th>Release Date</th><th>Status</th></tr></thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/SRW_Prologue.html';"><button>00|The Prologue</button></a></td>
-            <td>06-04-2025</td>
-            <td>TBC</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/err.html';"><button>01|The Silver Rails Myth</button></a></td>
-            <td>TBA</td>
-            <td>WIP</td>
-          </tr>
+          <tr><td>1</td><td><button onclick="window.location.href='./original/SRW_Prologue.html'">00|The Prologue</button></td><td>06-04-2025</td><td>TBC</td></tr>
+          <tr><td>2</td><td><button onclick="window.location.href='./original/err.html'">01|The Silver Rails Myth</button></td><td>TBA</td><td>WIP</td></tr>
         </tbody>
       </table>
     </div>
-<hr>
-    <div class="button-container">
-      <button onclick="toggleTHJ()">THE HEALER OF JIAOQIU</button>
-    </div>
-    
-  <div id="thjContent" class="content-box">
-      <strong><h4>THE HEALER OF JIAOQIU - WORK IN PROGRESS</h4></strong>
-      <p>Menceritakan seseorang bernama <strong>Jiaoqiu</strong> ia adalah salah satu anggota <code>yaoqing military</code> sebagai seorang dokter atau healer.</p>
 
-      <blockquote class="note">
-        <p><strong>[NOTE]</strong><br>
-        Karya ini dibuat hanyalah sebagai candaan semata dan karya ini tidak ada hubungannya dengan game <code>Honkai: Star Rail [HSR]</code>. Semuanya hanyalah khayalan belaka</p>
-      </blockquote>
-
-      <a href="./original/err.html" target="_blank">
-        <button>Baca Sekarang</button>
-      </a>
-
+    <hr>
+    <div class="button-container"><button onclick="toggleTHJ()">THE HEALER OF JIAOQIU</button></div>
+    <div id="thjContent" class="content-box">
+      <h4>THE HEALER OF JIAOQIU - WORK IN PROGRESS</h4>
+      <p>Menceritakan seseorang bernama <strong>Jiaoqiu</strong> dari <code>yaoqing military</code> sebagai healer.</p>
+      <blockquote><p><strong>[NOTE]</strong><br>Candaan belaka, tidak ada hubungan dengan <code>HSR</code>.</p></blockquote>
+      <a href="./original/err.html" target="_blank"><button>Baca Sekarang</button></a>
       <hr>
-      <strong><h4>Daftar Isi</h4></strong>
+      <h4>Daftar Isi</h4>
       <table>
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Episode | Title</th>
-            <th>Release Date</th>
-            <th>Status</th>
-          </tr>
-        </thead>
+        <thead><tr><th>No.</th><th>Episode | Title</th><th>Release Date</th><th>Status</th></tr></thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/err.html';"><button>00|The Prologue</button></a></td>
-            <td>TBA</td>
-            <td>WIP</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/err.html';"><button>01|The Yaoqing Healer</button></a></td>
-            <td>TBA</td>
-            <td>WIP</td>
-          </tr>
+          <tr><td>1</td><td><button onclick="window.location.href='./original/err.html'">00|The Prologue</button></td><td>TBA</td><td>WIP</td></tr>
+          <tr><td>2</td><td><button onclick="window.location.href='./original/err.html'">01|The Yaoqing Healer</button></td><td>TBA</td><td>WIP</td></tr>
         </tbody>
       </table>
     </div>
-<hr>
-    <div class="button-container">
-      <button onclick="toggleSTBD()">SUNDAY IS THE BEST DAY</button>
-    </div>
-    
-  <div id="stbdContent" class="content-box">
-      <strong><h4>SUNDAY IS THE BEST DAY - WORK IN PROGRESS</h4></strong>
-      <p>Menceritakan seseorang bernama <strong>Sunday</strong> ia adalah salah satu anggota <code>The Order</code>.</p>
 
-      <blockquote class="note">
-        <p><strong>[NOTE]</strong><br>
-        Karya ini dibuat hanyalah sebagai candaan semata dan karya ini tidak ada hubungannya dengan game <code>Honkai: Star Rail [HSR]</code>. Semuanya hanyalah khayalan belaka</p>
-      </blockquote>
-
-      <a href="./original/err.html" target="_blank">
-        <button>Baca Sekarang</button>
-      </a>
-
+    <hr>
+    <div class="button-container"><button onclick="toggleSTBD()">SUNDAY IS THE BEST DAY</button></div>
+    <div id="stbdContent" class="content-box">
+      <h4>SUNDAY IS THE BEST DAY - WORK IN PROGRESS</h4>
+      <p>Menceritakan <strong>Sunday</strong> dari <code>The Order</code>.</p>
+      <blockquote><p><strong>[NOTE]</strong><br>Semua hanyalah khayalan belaka, tidak terkait <code>HSR</code>.</p></blockquote>
+      <a href="./original/err.html" target="_blank"><button>Baca Sekarang</button></a>
       <hr>
-      <strong><h4>Daftar Isi</h4></strong>
+      <h4>Daftar Isi</h4>
       <table>
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Episode | Title</th>
-            <th>Release Date</th>
-            <th>Status</th>
-          </tr>
-        </thead>
+        <thead><tr><th>No.</th><th>Episode | Title</th><th>Release Date</th><th>Status</th></tr></thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/err.html';"><button>00|The Prologue</button></a></td>
-            <td>TBA</td>
-            <td>WIP</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="javascript:void(0);" onclick="window.location.href = './original/err.html';"><button>01|The Order</button></a></td>
-            <td>TBA</td>
-            <td>WIP</td>
-          </tr>
+          <tr><td>1</td><td><button onclick="window.location.href='./original/err.html'">00|The Prologue</button></td><td>TBA</td><td>WIP</td></tr>
+          <tr><td>2</td><td><button onclick="window.location.href='./original/err.html'">01|The Order</button></td><td>TBA</td><td>WIP</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT
-      
-    model website terinspirasi oleh <a href="https://cybercodeonline.com">Cyber Code Online</a> MIlik Dexter Huang
-      
+    <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT<br>
+    Model website terinspirasi oleh <a href="https://cybercodeonline.com">Cyber Code Online</a> milik Dexter Huang<br>
     dan website ini ditopang oleh GitHub.</p>
     <a href="https://github.com/join" target="_blank">
       <button class="footer-button">Bergabung ke GitHub dan Upload Kode Menarikmu Secara Gratis!!</button>
     </a>
   </footer>
-<!-- edit komen in jika tidak masuk -->
+
   <script>
-    function toggleSRW() {
-      var content = document.getElementById("srwContent");
-      if (content.classList.contains("show")) {
-        content.classList.remove("show");
-        content.classList.add("hide");
-        setTimeout(() => content.style.display = "none", 500);
-      } else {
-        content.style.display = "block";
-        setTimeout(() => {
-          content.classList.remove("hide");
-          content.classList.add("show");
-        }, 10);
-      }
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
     }
-    
-    function toggleTHJ() {
-      var content = document.getElementById("thjContent");
-      if (content.classList.contains("show")) {
-        content.classList.remove("show");
-        content.classList.add("hide");
-        setTimeout(() => content.style.display = "none", 500);
-      } else {
-        content.style.display = "block";
-        setTimeout(() => {
-          content.classList.remove("hide");
-          content.classList.add("show");
-        }, 10);
-      }
+
+    function toggleContent(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('show');
     }
-    
-    function toggleSTBD() {
-      var content = document.getElementById("stbdContent");
-      if (content.classList.contains("show")) {
-        content.classList.remove("show");
-        content.classList.add("hide");
-        setTimeout(() => content.style.display = "none", 500);
-      } else {
-        content.style.display = "block";
-        setTimeout(() => {
-          content.classList.remove("hide");
-          content.classList.add("show");
-        }, 10);
-      }
-    }
+
+    function toggleSRW() { toggleContent('srwContent'); }
+    function toggleTHJ() { toggleContent('thjContent'); }
+    function toggleSTBD() { toggleContent('stbdContent'); }
   </script>
 </body>
 </html>
