@@ -76,6 +76,12 @@
       font-family: inherit;
       cursor: pointer;
       border-radius: 0;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #2a2a2a;
+      transform: scale(1.03);
     }
 
     .content-box {
@@ -92,11 +98,12 @@
     }
 
     blockquote {
-      background: #222;
+      background: rgba(255, 255, 255, 0.5);
       border-left: 4px solid #a0a0ff;
       margin: 20px auto;
       padding: 10px 20px;
       max-width: 700px;
+      color: #000;
     }
 
     pre, code {
@@ -165,9 +172,8 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- Bar Navigasi -->
+<!-- Bar Navigasi -->
   <nav>
     <span class="nav-title">SRYAA</span>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
