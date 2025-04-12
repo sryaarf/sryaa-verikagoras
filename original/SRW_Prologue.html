@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Rail Wars | EPS-00 Prologue</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Rail Wars - Prologue</title>
   <style>
     body {
-      background-color: #24292e;
-      color: #ffffff;
-      font-family: 'Lexend Deca', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
       margin: 0;
       padding: 0;
       text-align: center;
+      padding-top: 10px;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(30, 30, 30, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(40, 40, 40, 0.6) 0%, transparent 50%);
     }
-
-    strong {
-      font-weight: bold;
-    }
-
+    
     nav {
-      background-color: #24292e;
+      background-color: rgba(15, 15, 15, 0.9);
       padding: 10px 0;
       position: fixed;
       top: 0;
@@ -30,15 +29,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #333;
     }
 
     .nav-title {
-      color: #87CEFA;
+      color: #a0a0ff;
       font-size: 24px;
       font-weight: bold;
-      margin: 0;
       padding-left: 20px;
-      text-align: left;
+      text-shadow: 0 0 10px rgba(160, 160, 255, 0.3);
     }
 
     .nav-links {
@@ -50,146 +49,185 @@
       padding-right: 20px;
     }
 
-    .nav-links li {
-      margin: 0;
-    }
-
     .nav-links a {
-      background-color: rgba(135, 206, 250, 0.1);
-      color: #87CEFA;
-      padding: 10px 15px;
+      color: #a0a0ff;
       text-decoration: none;
-      font-size: 16px;
-      border: 3px solid #87CEFA;
-      border-radius: 0;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      padding: 8px 12px;
     }
 
-    .nav-links a:hover {
-      background-color: rgba(135, 206, 250, 0.2);
-      transform: scale(1.05);
+    .hamburger {
+      display: none;
     }
 
-    .nav-links a:active {
-      background-color: rgba(135, 206, 250, 0.3);
+    h2, h4 {
+      margin: 0.5em 0;
     }
 
-    .container {
-      padding-top: 80px;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: left;
-      background-color: rgba(135, 206, 250, 0.1);
-      border: 2px solid rgba(135, 206, 250, 0.6);
-      padding: 20px;
-      box-sizing: border-box;
+    .button-container {
+      margin: 20px 0;
     }
 
-    h1, h2, h3, h4 {
-      color: #87CEFA;
-    }
-
-    p, blockquote {
-      font-size: 18px;
-    }
-
-    .btn {
-      background-color: rgba(135, 206, 250, 0.1);
-      color: #87CEFA;
-      border: 3px solid #87CEFA;
-      padding: 12px 18px;
-      margin: 10px auto;
+    button {
+      background-color: #1f1f1f;
+      color: #a0a0ff;
+      border: 1px solid #555;
+      width: 90%;
+      height: 50px;
+      font-family: inherit;
       cursor: pointer;
-      font-size: 14px;
-      display: inline-block;
-      text-decoration: none;
       border-radius: 0;
-      transition: all 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: rgba(135, 206, 250, 0.2);
-      border-color: #5dade2;
+    .content-box {
+      padding: 15px;
+      margin: 120px auto 30px;
+      background-color: #1c1c1c;
+      border-radius: 0px;
+      max-width: 900px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
-    .btn:active {
-      background-color: rgba(135, 206, 250, 0.3);
+    blockquote {
+      background: #222;
+      border-left: 4px solid #a0a0ff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      max-width: 700px;
+    }
+
+    details {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+      border-radius: 0px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    summary {
+      font-weight: bold;
+      color: #a0a0ff;
+      cursor: pointer;
     }
 
     .navigation {
-      margin-top: 20px;
+      margin-top: 2rem;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
-    .info-box {
-      background-color: rgba(255, 255, 255, 0.5);
-      border: 2px solid black;
-      padding: 15px;
-      margin: 100px auto 20px auto;
-      color: #000;
-      box-sizing: border-box;
-      max-width: 700px;
-      text-align: left;
+    .footer-button {
+      background-color: #333;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 0px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none;
     }
 
     footer {
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 20px;
-      margin-top: 20px;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      background-color: rgba(10, 10, 10, 0.8);
     }
 
-    footer p {
-      font-size: 14px;
+    footer a {
+      color: #a0a0ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 24px;
+        color: #a0a0ff;
+        padding-right: 20px;
+        cursor: pointer;
+      }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(15, 15, 15, 0.95);
+      }
+
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Bar Navigasi -->
   <nav>
     <span class="nav-title">SRYAA</span>
     <ul class="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="./navibar/credits.html">Credit</a></li>
-      <li><a href="./navibar/supporter.html">Supporter</a></li>
+      <li><a href="/navibar/credits.html">Credit</a></li>
+      <li><a href="/navibar/supporter.html">Supporter</a></li>
     </ul>
   </nav>
-
-  <blockquote class="info-box">
+<br>
+  <br>
+  <blockquote>
     <strong>NOTE:</strong><br>
     STAR RAIL WARS - WORK IN PROGRESS<br>
-    Menceritakan tentang aturan yang tidak dirapatkan bersama Transgalactic Star Railways [TSR], karena pihak Rail Defense Association [RDA] ingin The StoneHarts Rails berada di bawah kendali penuh militer bersenjata.<br><br>
-    Karya ini terinspirasi dari anime <strong>Galaxy Railways [GR]</strong> dan juga mengangkat elemen-elemen lore dari game <strong>Honkai: Star Rail [HSR]</strong>.
+    Terinspirasi dari Galaxy Railways & Honkai: Star Rail.
   </blockquote>
 
-  <div class="container">
-    <h1 id="star-rail-wars-id-">Star Rail Wars [ID]</h1>
-    <h2 id="prologue">PROLOGUE</h2>
-    <p>Pada Tahun 3246 Amber Era, manusia mulai melakukan eksplorasi luar angkasa dan kolonisasi di berbagai bintang. Alih-alih menggunakan pesawat luar angkasa bersenjata berat dengan berbagai ukuran, mereka mengandalkan kereta antar bintang yang dilengkapi dengan roda magnetik dan tabung perisai untuk melindungi Rel Antar Bintang.</p>
-    <p>Untuk menjaga keamanan, terdapat kereta keamanan sipil yang dimiliki oleh organisasi sipil. Kereta ini dilengkapi dengan persenjataan ringan untuk menghadapi ancaman perompak serta digunakan untuk membersihkan jalur dari asteroid tak berorbit yang dapat menabrak tabung perisai dan merusak komponen Rel Antar Bintang.</p>
-    <p>Selain itu, terdapat fraksi militer yang berfungsi sebagai pusat keamanan galaksi. Namun, fraksi ini tidak memiliki wewenang untuk mengatur Jalur Antar Bintang, yang sepenuhnya berada di bawah kendali <strong>Transgalactic Star Railways [TSR]</strong>.</p>
-    <p>Di sisi lain, terdapat juga fraksi militer pertahanan yang memiliki akses kendali eksklusif terhadap <strong>The Amethyst Rails</strong>. Jalur ini tidak sepanjang milik <strong>The StoneHearts Rail</strong>. Fraksi militer tersebut dikenal sebagai <strong>Rail Defense Association [RDA]</strong>.</p>
+  <div class="content-box">
+    <h1>Star Rail Wars [ID]</h1>
+    <h2>PROLOGUE</h2>
+    <p>Pada Tahun 3246 Amber Era, manusia mulai melakukan eksplorasi luar angkasa dan kolonisasi di berbagai bintang...</p>
 
-    <h2 id="aliansi-dan-konflik">Aliansi dan Konflik</h2>
-    <p>Di era ini, kekuatan tidak lagi ditentukan oleh jumlah senjata, melainkan oleh seberapa luas kendali terhadap jalur kereta antarbintang. Tiga kekuatan utama bersaing dalam diam—masing-masing membawa visi dan kepentingannya sendiri terhadap masa depan galaksi.</p>
-    <p><strong>Transgalactic Star Railways [TSR]</strong> dikenal sebagai aliansi tertua dan paling terorganisir. Mereka menjaga kestabilan ekonomi galaksi melalui pengelolaan Jalur Antar Bintang yang efisien dan aman. Jalur mereka dikenal dengan sebutan <em>The StoneHearts Rail</em>, jalur paling stabil dan padat lalu lintas di antara sistem bintang.</p>
-    <p>Di sisi lain, <strong>Rail Defense Association [RDA]</strong> muncul dari kekhawatiran akan ancaman asing dan sabotase dari luar sistem. Mereka membentuk jalur sendiri, <em>The Amethyst Rails</em>, yang lebih eksklusif dan hanya digunakan untuk kepentingan militer. Tidak seperti TSR, RDA percaya bahwa keamanan galaksi harus dikelola di bawah komando militer dengan disiplin ketat.</p>
-    <p>Sementara itu, <strong>Free Railway Coalition [FRC]</strong> adalah salah satu organisasi resmi yang berada di bawah naungan <strong>TSR</strong>. Didirikan untuk fokus pada perawatan dan perlindungan infrastruktur <em>The StoneHearts Rail</em>, FRC kini menjadi ujung tombak dalam pengembangan jalur baru bernama <em>The Azure Loop</em>. Jalur ini merupakan bagian dari rencana ekspansi <strong>Jade Stone Line</strong> yang akan melayani koloni terpencil serta jalur dagang eksperimental.
-    <br><br>
-    FRC telah merancang kereta generasi terbaru untuk jalur ini—menggabungkan teknologi pelindung baru, sistem navigasi berbasis AI, dan efisiensi energi yang tinggi, menjadikannya sebagai simbol kemajuan teknologis dan kolaborasi sipil di bawah kepemimpinan TSR.</p>
+    <h2>Aliansi dan Konflik</h2>
 
-    <h2 id="sebuah-ketegangan-yang-mulai-menguat">Sebuah Ketegangan yang Mulai Menguat</h2>
-    <p>Ketika RDA mengajukan permohonan agar <em>The StoneHearts Rail</em> di bawah kendali militer untuk tujuan “keamanan menyeluruh”, pihak TSR menolak keras. Penolakan ini memicu ketegangan diplomatik. Isu tersebut mencuat ke publik dan memecah opini masyarakat galaksi. Di tengah situasi tersebut, FRC justru mendapat simpati dari berbagai pihak yang merasa terhimpit oleh dominasi dua raksasa tersebut.</p>
-    <p>Prolog ini menandai awal dari konflik besar yang akan mengguncang rel antar bintang. Tidak hanya tentang kendali jalur, tapi tentang siapa yang berhak menentukan masa depan perjalanan antargalaksi—kekuatan militer, institusi korporat, atau kebebasan rakyat?</p>
+    <details>
+      <summary>Transgalactic Star Railways [TSR]</summary>
+      <p>TSR adalah aliansi tertua dan paling terorganisir. Mereka menjaga kestabilan ekonomi galaksi melalui pengelolaan <em>The StoneHearts Rail</em>.</p>
+    </details>
+
+    <details>
+      <summary>Rail Defense Association [RDA]</summary>
+      <p>RDA muncul karena ancaman asing dan sabotase. Mereka mengelola <em>The Amethyst Rails</em> secara eksklusif untuk militer.</p>
+    </details>
+
+    <details>
+      <summary>Free Railway Coalition [FRC]</summary>
+      <p>FRC berada di bawah naungan TSR dan bertugas melindungi infrastruktur The StoneHearts Rail serta mengembangkan <em>The Azure Loop</em>.</p>
+    </details>
+
+    <h2>Sebuah Ketegangan yang Mulai Menguat</h2>
+    <p>Ketika RDA mengajukan permohonan agar <em>The StoneHearts Rail</em> dikendalikan militer dan ditolak TSR, ketegangan pun memuncak...</p>
 
     <div class="navigation">
-      <a href="#" class="btn prev-btn">&laquo; Chapter Sebelumnya</a>
-      <a href="#" class="btn next-btn">Chapter Selanjutnya &raquo;</a>
+      <a href="https://drathaivehzuuryaaajyaqiuuu.github.io/sryaa-verikava/" class="footer-button">&laquo; Kembali</a>
+      <a href="/original/err.html" class="footer-button">Chapter Selanjutnya &raquo;</a>
     </div>
   </div>
 
   <footer>
-    <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT. Model website terinspirasi oleh <a href="https://cybercodeonline.com">Cyber Code Online</a> milik Dexter Huang dan website ini ditopang oleh GitHub.</p>
+    <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT.<br />
+    Model website terinspirasi oleh <a href="https://cybercodeonline.com">Cyber Code Online</a> milik Dexter Huang dan ditopang oleh GitHub.</p>
   </footer>
 </body>
 </html>
