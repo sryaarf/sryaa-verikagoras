@@ -13,9 +13,10 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      background-image: 
-        radial-gradient(circle at 25% 25%, rgba(30, 30, 30, 0.8) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(40, 40, 40, 0.6) 0%, transparent 50%);
+      background-image:
+  radial-gradient(circle at 25% 25%, rgba(30, 30, 30, 0.8) 0%, transparent 50%),
+  radial-gradient(circle at 75% 75%, rgba(40, 40, 40, 0.6) 0%, transparent 50%);
+
     }
 
     nav {
@@ -271,7 +272,7 @@
     <p>Situs ini dibuat oleh saya dan dipoles dengan bantuan ChatGPT<br>
     Model website terinspirasi oleh <a href="https://cybercodeonline.com">Cyber Code Online</a> milik Dexter Huang<br>
     dan website ini ditopang oleh GitHub.</p>
-    <a href="https://github.com/join" target="_blank">
+    <a href="https://github.com/join" target="_blank" rel="noopener noreferrer">
       <button class="footer-button">Bergabung ke GitHub dan Upload Kode Menarikmu Secara Gratis!!</button>
     </a>
   </footer>
@@ -280,7 +281,7 @@
     function toggleMenu() {
       document.querySelector('.nav-links').classList.toggle('active');
     }
-
+  
     function toggleContent(id) {
       const el = document.getElementById(id);
       el.classList.toggle('show');
